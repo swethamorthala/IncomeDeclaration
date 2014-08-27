@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-class employee extends CI_Controller {
+class addemployee extends CI_Controller {
     //put your code here
 
 	public function  __construct() {
