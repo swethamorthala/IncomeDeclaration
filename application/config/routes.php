@@ -43,8 +43,11 @@ $route['404_override'] = '';
 $route['register'] = 'idregister/index';
 $route['(:any)/login'] = 'companies';
 $route['employee'] = 'addemployee/index';
+$route['aboutus'] = 'info/Aboutus/index';
+$route['contactus'] = 'info/contactus/index';
 $route['(:any)/profile'] = 'companyprofile';
 $route['(:any)'] = 'companies';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

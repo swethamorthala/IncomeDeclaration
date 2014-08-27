@@ -17,8 +17,8 @@ and open the template in the editor.
 <div  class="header-tabs"> 
 
 <ul class="tabs">
-	<li><a href="tab1.html">About us</a></li>
-	<li><a href="tab2.html">Contact us</a></li>
+	<li><a href="/index.php/aboutus">About us</a></li>
+	<li><a href="/index.php/contactus">Contact us</a></li>
 	<li><a href="/index.php/register">Register</a></li>
 	<li><a href="/index.php">Home</a></li>
 </ul>
