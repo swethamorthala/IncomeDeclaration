@@ -42,6 +42,7 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 $route['register'] = 'idregister/index';
 $route['(:any)/login'] = 'companies';
+$route['employee'] = 'employee/index';
 $route['(:any)/profile'] = 'companyprofile';
 $route['(:any)'] = 'companies';
 
