@@ -19,8 +19,8 @@ and open the template in the editor.
 <ul class="tabs">
 	<li><a href="tab1.html">About us</a></li>
 	<li><a href="tab2.html">Contact us</a></li>
-	<li><a href="tab3.html">Register</a></li>
-	<li><a href="tab3.html">Home</a></li>
+	<li><a href="/index.php/register">Register</a></li>
+	<li><a href="/index.php">Home</a></li>
 </ul>
 </div>
 

@@ -14,7 +14,7 @@ class addemployee extends CI_Controller {
 	public function index() {
 		$this->load->helper('form');
 	    $this->load->library('form_validation');
-		$data['title'] = "addemployee";
+		$data['title'] = "employee";
 
 		$this->form_validation->set_rules('first_name', 'first Name', 'required|min_length[3]|max_length[50]|xss_clean|trim');
 	    $this->form_validation->set_rules('last_name', 'last Name', 'optional|min_length[3]|max_length[50]|xss_clean|trim');

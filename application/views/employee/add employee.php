@@ -5,7 +5,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('add employee') ?>
+<?php echo form_open('employee') ?>
 
 	<label for="first name">first name : </label>
 	<input type="input" name="first_name" value="<?php echo set_value('first_name'); ?>" size="30"/><br />
