@@ -42,6 +42,10 @@ class Companies extends CI_Controller {
 				$this->load->library('session');
 				$this->session->set_userdata('company_id',$company->id);
 				$this->session->set_userdata('company_name',$company->company_name);
+				$this->session->set_userdata('company_url',$currenturl);
+				$this->session->set_userdata('isUserLoggedIn',TRUE);
+
+		
 				
 				
 				redirect('/'.$currenturl.'/profile', 'location', 301);

@@ -10,6 +10,12 @@
 |
 */
 
+$hook['pre_controller'] = array(
+                                'class'    => 'loginverifier',
+                                'function' => 'index',
+                                'filename' => 'loginverifier.php',
+                                'filepath' => 'hooks'
+                                );
 
 
 /* End of file hooks.php */

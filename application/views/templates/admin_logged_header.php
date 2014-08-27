@@ -8,21 +8,9 @@ and open the template in the editor.
 	<title><?php echo $title ?> Income declaration. </title>
 
 	<link rel="stylesheet" type="text/css" href="/id.css">
-        <link rel="stylesheet" type="text/css" href="/tabs.css">
 </head>
 <body>
 	<div class="header">
 		<p>Income Declaration.</p>
-	
+<span class="logout">	<a href="/index.php/logout">LOGOUT</a> </span>
 	</div>
-<div  class="header-tabs"> 
-
-<ul class="tabs">
-	<li><a href="/index.php/aboutus">About us</a></li>
-	<li><a href="/index.php/contactus">Contact us</a></li>
-	<li><a href="/index.php/register">Register</a></li>
-	<li><a href="/index.php">Home</a></li>
-</ul>
-</div>
-
-
