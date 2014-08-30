@@ -32,16 +32,18 @@ div.header-tabs li a
             padding:4px 4px;
             display:inline-block;
             border-radius:3px 3px 3px 3px;
-            background:blue;
+            background:orange;
             font-size:16px;
             font-weight:500;
-            color: white;
+            color:white;
             transition:all linear 0.15s;
             text-decoration:none;
         
 }
 ul.tabs li a:hover{
-background-color:skyblue;
+/*background-color:olive;*/
+color:olive;
+
 }
 
 
