@@ -20,7 +20,7 @@ and open the template in the editor.
 			<li><a href="/index.php/logout">LOGOUT</a></li> 
 			<li><a href="/index.php/employeelist">LIST OF EMPLOYEE</a></li>
 			<li><a href="/index.php/upload">UPLOAD CTC</a></li>
-			<li><a href="/index.php/employee">ADD EMPLOYEE</a></li>
+			<li><a href="employee">ADD EMPLOYEE</a></li>
 			<li><a href="/index.php/home">HOME</a></li>
 		
 		</ul>

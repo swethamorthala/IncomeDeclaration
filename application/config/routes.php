@@ -42,10 +42,10 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 $route['register'] = 'idregister/index';
 $route['logout'] = 'logout/index';
-$route['(:any)/login'] = 'companies';
-$route['employee'] = 'addemployee/index';
 $route['aboutus'] = 'info/Aboutus/index';
 $route['contactus'] = 'info/contactus/index';
+$route['(:any)/login'] = 'companies';
+$route['(:any)/employee'] = 'addemployee/index';
 $route['(:any)/profile'] = 'companyprofile';
 $route['(:any)'] = 'companies';
 
