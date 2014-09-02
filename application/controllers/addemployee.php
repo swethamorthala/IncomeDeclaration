@@ -17,39 +17,33 @@ class addemployee extends CI_Controller {
 	    $this->load->library('form_validation');
 		$data['title'] = "employee";
 
-		$this->form_validation->set_rules('first_name', 'first Name', 'required|min_length[3]|max_length[50]|xss_clean|trim');
-	    $this->form_validation->set_rules('last_name', 'last Name', 'optional|min_length[3]|max_length[50]|xss_clean|trim');
-                $this->form_validation->set_rules('email', 'Email', 'required|min_length[5]|max_length[100]|valid_email');
+		$this->form_validation->set_rules('First_Name', 'First Name', 'required|min_length[3]|max_length[50]|xss_clean|trim');
+	    $this->form_validation->set_rules('Last_Name', 'Last Name', 'required|min_length[3]|max_length[50]|xss_clean|trim');
+            $this->form_validation->set_rules('Employee_Id', 'Employee Id', 'required|min_length[3]|max_length[50]|xss_clean|trim');
+             $this->form_validation->set_rules('Role_Band', 'Role Band', 'required|min_length[3]|max_length[50]|xss_clean|trim'); 
+            $this->form_validation->set_rules('Email', 'Email', 'required|min_length[5]|max_length[100]|valid_email');
 		
-            $url = preg_replace("/[^A-Za-z0-9]/", '',  $this->input->post('first_name'));
-
-
-
+           
 		$parameters = array(
 			'url'=>$url,
-			'first_name'=>$this->input->post('first_name'),
-			'last_name'=>$this->input->post('last_name'),
-			'email'=>$this->input->post('email'),
+			'First_Name'=>$this->input->post('First_Name'),
+			'Last_Name'=>$this->input->post('Last_Name'),
+                        'Employee_Id'=>$this->input->post('Employee_Id'),
+                        'Role_Band'=>$this->input->post('Role_Band'),
+			'Email'=>$this->input->post('Email'),
 			);
 
 		if($this->form_validation->run() === FALSE) {
-			$this->load->view('templates/header', $data);
-			$this->load->view('employee/add employee', $data);
-			$this->load->view('templates/footer', $data);
+			$this->load->view('templates/header');
+			$this->load->view('employee/add employee');
+			$this->load->view('templates/footer');
 		} 
                 else {
-		$this->employee_model->create($parameters);
+		
 			
-			$company = $this->employee_model->getCompany($url);
-
-			$this->session->set_userdata('company_id',$company->id);
-			$this->session->set_userdata('company_name',$company->company_name);
-			$this->session->set_userdata('url',$company->url);
-                        
-			$data['company_url'] =$url;
-			$this->load->view('templates/header', $data);
-			$this->load->view('employee/add employee success', $data);
-			$this->load->view('templates/footer', $data);
+			$this->load->view('templates/header');
+			$this->load->view('employee/add employee success');
+			$this->load->view('templates/footer');
 		}
 
 	

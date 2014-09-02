@@ -40,13 +40,17 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-$route['register'] = 'idregister/index';
 $route['logout'] = 'logout/index';
+$route['register'] = 'idregister/index';
 $route['aboutus'] = 'info/Aboutus/index';
 $route['contactus'] = 'info/contactus/index';
-$route['(:any)/login'] = 'companies';
+$route['upload'] = 'upload/index';
+$route['employee'] = 'addemployee/index';
+
 $route['(:any)/employee'] = 'addemployee/index';
+$route['(:any)/upload'] = 'upload/index';
 $route['(:any)/profile'] = 'companyprofile';
+$route['(:any)/login'] = 'companies';
 $route['(:any)'] = 'companies';
 
 
