@@ -9,6 +9,7 @@ class addemployee extends CI_Controller {
 
 	public function  __construct() {
 		parent::__construct();
+                $this->load->model('employee_model');
 	}
 
 	public function index() {
@@ -37,7 +38,14 @@ class addemployee extends CI_Controller {
 			$this->load->view('templates/footer', $data);
 		} 
                 else {
-		
+		$this->employee_model->create($parameters);
+			
+			$company = $this->employee_model->getCompany($url);
+
+			$this->session->set_userdata('company_id',$company->id);
+			$this->session->set_userdata('company_name',$company->company_name);
+			$this->session->set_userdata('url',$company->url);
+                        
 			$data['company_url'] =$url;
 			$this->load->view('templates/header', $data);
 			$this->load->view('employee/add employee success', $data);

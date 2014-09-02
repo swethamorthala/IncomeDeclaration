@@ -10,7 +10,7 @@
  *
  * @author Red
  */
-class Aboutus extends CI_Controller{
+class aboutus extends CI_Controller{
     //put your code here
 
     public function index()
