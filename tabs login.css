@@ -1,0 +1,64 @@
+/* 
+    Document   : tabs
+    Created on : 27-Aug-2014, 12:27:31
+    Author     : Red
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+div.header
+{
+    
+    background-color:#003399;
+    line-height: 25px;
+    height: 7%;
+}
+
+div.header-tabs
+{   
+margin-right: 10%;
+}
+div.header-tabs li
+{
+        margin:0px;  
+        float:right;
+        list-style:none;  
+       line-height: 25px;
+       
+       
+       
+}
+
+div.header-tabs li a
+{
+    
+            padding:4px 4px;
+            display:inline-block;
+            border-radius:2px 2px 2px 2px;
+            background-color:#ff6600;
+            font-family:'Trebuchet MS';
+            font-size: 14px;
+            font-weight:normal;
+            color:white;
+            transition:all linear 0.15s;
+            text-decoration:none;                         
+          /*  border-bottom : thin solid brown;  */
+             width:110px;
+}
+ul.tabs li a:hover
+{
+            background-color:olive;
+}
+
+
+
+
+

@@ -7,22 +7,27 @@ and open the template in the editor.
 <head>
 	<title><?php echo $title ?> Income declaration. </title>
 
-	<link rel="stylesheet" type="text/css" href="/id.css">
-	<link rel="stylesheet" type="text/css" href="/tabs.css">
+	<link rel="stylesheet" type="text/css" href="/id1.css">
+	<link rel="stylesheet" type="text/css" href="/tabs login.css">
 </head>
 <body>
 	<div class="header">
 		<p>Income Declaration.</p>
 		<span class="Logout"><a href="/index.php/logout"></a></span>
-	</div>
-	<div class="header-tabs">
+                
+    <div class="header-tabs">
+        
 		<ul class="tabs">
-			<li><a href="/index.php/logout">LOGOUT</a></li> 
-			<li><a href="/index.php/employeelist">LIST OF EMPLOYEE</a></li>
-			<li><a href="/index.php/upload">UPLOAD CTC</a></li>
-			<li><a href="employee">ADD EMPLOYEE</a></li>
-			<li><a href="/index.php/home">HOME</a></li>
-		
+                        <li><a href="/index.php/logout">Logout</a></li> 
+			<li><a href="/index.php/employeelist">List Of Employee</a></li>
+			<li><a href="/index.php/upload">Upload CTC</a></li>
+			<li><a href="employee">Add Employee</a></li>
+			<li><a href="/index.php/home">Home</a></li>
+                    
 		</ul>
-
+    </div>
 	</div>
+                    
+    
+</body>
+</html>

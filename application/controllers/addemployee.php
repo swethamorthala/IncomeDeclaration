@@ -34,7 +34,7 @@ class addemployee extends CI_Controller {
 			);
 
 		if($this->form_validation->run() === FALSE) {
-			$this->load->view('templates/header');
+			$this->load->view('templates/admin_logged_header');
 			$this->load->view('employee/add employee');
 			$this->load->view('templates/footer');
 		} 

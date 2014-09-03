@@ -1,7 +1,7 @@
 
 <div class="content">
-
-<h2>Add Employee:</h2>
+    <div class="add_employee">
+    <h3>Add Employee:</h3>
 
 <?php echo validation_errors(); ?>
 
@@ -25,7 +25,9 @@
 	<div class="button">
 	<input type="submit" name="submit" value="Add Employee" />
 	</div>
+    
 
 </form>
+</div>
 </div>
 
