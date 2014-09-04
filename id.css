@@ -16,7 +16,7 @@ root {
 }
 
 h2 {
-	text-align: left;
+	text-align:left;
 }
 
 
@@ -28,6 +28,9 @@ div.content
 {
         width: 70%;
 	margin-left: 15%;
+         font-family:'Trebuchet MS';
+            font-size: 15px;
+            font-weight:normal;
         /*text-align:center;*/
 
 }

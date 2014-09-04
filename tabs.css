@@ -21,9 +21,11 @@ height:10%; margin-right:10%;
 }
 div.header-tabs li
 {
-        margin:1px;  
+        margin:0px;  
         float:right;
-        list-style:none;        
+        list-style:none;  
+        line-height: 25px;
+        
         
 }
 
@@ -31,15 +33,15 @@ div.header-tabs li a
 {
             padding:4px 4px;
             display:inline-block;
-            border-radius:3px 3px 3px 3px;
+            border-radius:0px 0px 0px 0px;
             background-color:#ff6600;
             font-family:'Trebuchet MS';
             font-size: 15px;
-            font-weight:bold;
+            font-weight:normal;
             color:white;
             transition:all linear 0.15s;
             text-decoration:none;
-        
+            width: 80px;
     
 }
 ul.tabs li a:hover{
