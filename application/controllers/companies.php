@@ -18,7 +18,7 @@ class Companies extends CI_Controller {
 	}
 
 	public function index() {
-		$this->load->library('url');
+		//$this->load->helper('url');
 		$this->load->library('form_validation');
 
 		$currenturl =$this->uri->segment(1);

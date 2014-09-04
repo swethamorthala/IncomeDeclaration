@@ -21,6 +21,7 @@ class IDRegister extends CI_Controller {
 	public function index() {
 		$this->load->helper('form');
 	    $this->load->library('form_validation');
+		$this->load->library('session');
 		$data['title'] = "Register";
 
 		$this->form_validation->set_rules('company_name', 'Company Name', 'required|min_length[3]|max_length[50]|xss_clean|trim');
@@ -49,9 +50,12 @@ class IDRegister extends CI_Controller {
 			
 			$company = $this->register_model->getCompany($url);
 
+
+
 			$this->session->set_userdata('company_id',$company->id);
 			$this->session->set_userdata('company_name',$company->company_name);
-			$this->session->set_userdata('url',$company->url);
+			$this->session->set_userdata('company_url',$company->url);
+			$this->session->set_userdata('isUserLoggedIn',TRUE);
 
 			$data['company_url'] =$url;
 
