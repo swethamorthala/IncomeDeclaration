@@ -41,7 +41,7 @@ class addemployee extends CI_Controller {
                 else {
 		
 			
-			$this->load->view('templates/header');
+			$this->load->view('templates/admin_logged_header');
 			$this->load->view('employee/add employee success');
 			$this->load->view('templates/footer');
 		}
