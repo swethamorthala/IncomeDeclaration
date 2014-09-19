@@ -17,14 +17,15 @@ root {
 
 div.header-tabs
 {
-height:10%; margin-right:10%;
+height:10%;
+margin-right:10%;
 }
 div.header-tabs li
 {
         margin:0px;  
         float:right;
         list-style:none;  
-        line-height: 25px;
+        line-height: 30px;
         
         
 }
@@ -33,7 +34,7 @@ div.header-tabs li a
 {
             padding:4px 4px;
             display:inline-block;
-            border-radius:0px 0px 0px 0px;
+            border-radius:2px 2px 2px 2px;
             background-color:#ff6600;
             font-family:'Trebuchet MS';
             font-size: 15px;
@@ -45,7 +46,7 @@ div.header-tabs li a
     
 }
 ul.tabs li a:hover{
-background-color:#cc9933;
+background-color:#003399;
 /*color: #cc9933;*/
 }
 

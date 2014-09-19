@@ -14,24 +14,36 @@
 root { 
     display: block;
 }
-div.header
+h1,h3{
+    margin-top: 8%;
+    margin-left:10%;
+}
+
+/*div.header 
 {
-    
-    background-color:#003399;
-    line-height: 25px;
+   background-color:#003399;
+    line-height:35px;
     height: 7%;
+    color:#ff6600;
+    
+}*/
+div.header a
+{
+    margin-left:10%;
 }
 
 div.header-tabs
 {   
-margin-right: 10%;
+height:10%;
+margin-right:10%;
+
 }
-div.header-tabs li
+div.header-tabs li 
 {
         margin:0px;  
         float:right;
         list-style:none;  
-       line-height: 25px;
+        line-height: 30px;
        
        
        
@@ -42,7 +54,7 @@ div.header-tabs li a
     
             padding:4px 4px;
             display:inline-block;
-            border-radius:2px 2px 2px 2px;
+            border-radius:3px 3px 3px 3px;
             background-color:#ff6600;
             font-family:'Trebuchet MS';
             font-size: 14px;
@@ -53,9 +65,10 @@ div.header-tabs li a
           /*  border-bottom : thin solid brown;  */
              width:110px;
 }
+
 ul.tabs li a:hover
 {
-            background-color:olive;
+            background-color:#003399;
 }
 
 

@@ -47,6 +47,8 @@ $route['contactus'] = 'info/contactus/index';
 $route['upload'] = 'upload/index';
 $route['upload/do_upload'] = 'upload/do_upload';
 $route['employee'] = 'addemployee/index';
+$route['employeedetails'] = 'employee_details/index';
+$route['listofemployee'] = 'listofemployee/index';
 
 $route['(:any)/employee'] = 'addemployee/index';
 $route['(:any)/upload'] = 'upload/index';

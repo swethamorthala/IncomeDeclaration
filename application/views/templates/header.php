@@ -5,15 +5,15 @@ and open the template in the editor.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title><?php echo $title ?> Income declaration. </title>
+	<title><?php echo $title ?> Income Declaration </title>
 
 	<link rel="stylesheet" type="text/css" href="/id.css">
         <link rel="stylesheet" type="text/css" href="/tabs.css">
+         
 </head>
 <body>
 	<div class="header">
-		<p>Income Declaration.</p>
-	
+            <a href="/index.php/"><img src="/logo.png"/></a>
 	</div>
 <div  class="header-tabs"> 
 

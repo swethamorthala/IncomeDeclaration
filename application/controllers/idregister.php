@@ -50,9 +50,8 @@ class IDRegister extends CI_Controller {
 			
 			$company = $this->register_model->getCompany($url);
 
-
-
-			$this->session->set_userdata('company_id',$company->id);
+                                                
+			$this->session->set_userdata('company_id',$company->id);                   
 			$this->session->set_userdata('company_name',$company->company_name);
 			$this->session->set_userdata('company_url',$company->url);
 			$this->session->set_userdata('isUserLoggedIn',TRUE);

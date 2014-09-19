@@ -1,6 +1,7 @@
 
 
 <div class="content">
+    <div class="register">
 
 <h2>Register here:</h2>
 
@@ -25,4 +26,5 @@
 	</div>
 
 </form>
+</div>
 </div>

@@ -4,8 +4,9 @@ and open the template in the editor.
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <body>
-
-	<p> here is where company should log in </p>
+<div class="content">
+    <div class="login">
+    <h3> here is where company should log in </h3>
 
 	<?php echo validation_errors(); ?>
 	<?php
@@ -18,15 +19,18 @@ and open the template in the editor.
 
 <?php echo form_open($submission_url) ?>
 
-
+        
 
 	<label for="user_name">User Name : </label>
 	<input type="input" name="user_name" value="<?php echo set_value('user_name'); ?>" size="30"/><br />
 
 	<label for="password">Password : </label>
 	<input type="password" name="password" value="<?php echo set_value('password'); ?>" size="30"/><br />
-
+        <div class="button">
 	<input type="submit" name="submit" value="Login" />
-
+        </div>
 </form>
-</body>
+   
+    </div>
+</div>
+        </body>

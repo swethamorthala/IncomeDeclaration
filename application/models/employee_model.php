@@ -19,37 +19,40 @@ class Employee_Model extends CI_Model {
 	 }
 
 	public function create($parameters) {
-		$company = array(
-
-			'url' => $parameters['url'],
-			'company_name' => $parameters['company_name'],
-			'status' => 'ACTIVE'
-
-		);
-
 		
+
 		$this->db->trans_start();
-		 $this->db->insert('company', $company);
 
-
+                 
 		 $employee = array(
-			'company_id' => mysql_insert_id(),
+			'company_id' => $parameters['company_id'],
 			'First_Name' => $parameters['First_Name'],
 			'Last_Name' => $parameters['Last_Name'],
-                        'Employee_Id' => $parameters['Employee_Id'],
-                        'Role_Band' => $parameters['Role_Band'],
-                        'Email' => $parameters['Email'],
+                        'employee_uid'=>$parameters['employee_uid'],
+                        'Role_Band' =>'EMPLOYEE',
+                        'Email' => $parameters['Email'],            
+			'status' => 'ACTIVE'
+
+		);
+                 $this->db->insert('employee', $employee);
+
+            $employeeId = mysql_insert_id();
+         
+		 $user = array(
+                       'company_id' => $parameters['company_id'],
+                       'employee_id' => $employeeId,
+		       'user_name' => '',
+		       'password' => $parameters['password'],
+                       'Email' => $parameters['Email'],
 			'status' => 'ACTIVE'
 
 		);
 
-		 
-		 $this->db->insert('employee', $employee);
-
+		 $this->db->insert('user', $user);
+		 	 
 		$this->db->trans_complete();
 
                 return;
 	}
-
 }
 ?>

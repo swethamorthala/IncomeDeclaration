@@ -28,17 +28,32 @@ class Register_Model extends CI_Model {
 		);
 
 		
-
-		
-
-	
 		$this->db->trans_start();
-		 $this->db->insert('company', $company);
+                
+		$this->db->insert('company', $company);
+                
+                $companyId = mysql_insert_id();
+                 
+                $employee = array(
+			'company_id' => $companyId,
+			'First_Name' => '',
+			'Last_Name' => '',
+                        'Role_Band' => 'ADMIN',
+                        'Email' => $parameters['email'],
+			'status' => 'ACTIVE'
 
+		);
+                
+                $this->db->insert('employee', $employee);
+                
+                $employeeId = mysql_insert_id();
+         
 		 $user = array(
-			'company_id' => mysql_insert_id(),
+			'company_id' => $companyId,
+                        'employee_id' => $employeeId,
 			'user_name' => $parameters['user_name'],
 			'password' => $parameters['password'],
+                        'Email' => $parameters['email'],
 			'status' => 'ACTIVE'
 
 		);
@@ -61,7 +76,7 @@ class Register_Model extends CI_Model {
 	}
 
 	public function login($company_id, $user_name, $password) {
-		$sql = "SELECT * FROM user WHERE company_id = ? AND user_name = ? AND password = ?";
+		$sql = "SELECT * FROM user WHERE company_id = ? AND  user_name = ? AND password = ?";
 		$query = $this->db->query($sql, array($company_id, $user_name, $password));
 		if($query->num_rows() > 0) {
 			return TRUE;
