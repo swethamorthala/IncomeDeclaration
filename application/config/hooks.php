@@ -15,7 +15,7 @@ $hook['pre_controller'] = array(
                                 'function' => 'index',
                                 'filename' => 'loginverifier.php',
                                 'filepath' => 'hooks'
-                                );
+                                ); 
 
 
 /* End of file hooks.php */

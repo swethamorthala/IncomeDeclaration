@@ -45,6 +45,7 @@ $route['register'] = 'idregister/index';
 $route['aboutus'] = 'info/Aboutus/index';
 $route['contactus'] = 'info/contactus/index';
 $route['upload'] = 'upload/index';
+$route['upload/do_upload'] = 'upload/do_upload';
 $route['employee'] = 'addemployee/index';
 
 $route['(:any)/employee'] = 'addemployee/index';

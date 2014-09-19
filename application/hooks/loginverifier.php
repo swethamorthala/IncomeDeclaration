@@ -25,7 +25,7 @@ class loginverifier extends CI_Controller {
 
 			if(! $seg1) {
 				//Home page no probs
-			}else if($seg1 == 'register'||$seg1 == 'aboutus'||$seg1 == 'contactus') {
+			}else if($seg1 == 'register'||$seg1 == 'aboutus'||$seg1 == 'contactus' || $seg1 == 'upload') {
 				//No probs
 
 			} else if ($seg2 == 'login') {
