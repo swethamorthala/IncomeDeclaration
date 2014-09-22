@@ -17,6 +17,7 @@ class upload extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
+		$this->load->model('ctcdetails_model');
 	}
 
 	function index()
@@ -47,7 +48,11 @@ class upload extends CI_Controller{
 
 			echo "File saved at ".$file_info['full_path'];
 
+
+
 			$this->load->view('upload_success', $data);
+
+			$ctcDetails = array();
 
 			$objPHPExcel = PHPExcel_IOFactory::load($file_info['full_path']);
 
@@ -64,16 +69,28 @@ class upload extends CI_Controller{
     echo ' and ' . $highestRow . ' row.';
     echo '<br>Data: <table border="1"><tr>';
     for ($row = 1; $row <= $highestRow; ++ $row) {
+		$component = array();
+		$component['employee_id'] = 1234;
+
         echo '<tr>';
         for ($col = 0; $col < $highestColumnIndex; ++ $col) {
+
             $cell = $worksheet->getCellByColumnAndRow($col, $row);
             $val = $cell->getValue();
+			if($col == 0) {
+				$component['ctc_name'] =  $val;
+			} else if($col == 1) {
+				$component['ctc_value'] =  $val;
+			}
             $dataType = PHPExcel_Cell_DataType::dataTypeForValue($val);
             echo '<td>' . $val . '<br>(Typ ' . $dataType . ')</td>';
         }
+		$ctcDetails[$row-1] = $component;
         echo '</tr>';
     }
     echo '</table>';
+
+	$this->ctcdetails_model->createCTCDetails($ctcDetails);
 
 			//var_dump($objPHPExcel);
 
