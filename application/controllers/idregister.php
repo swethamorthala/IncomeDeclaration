@@ -32,6 +32,8 @@ class IDRegister extends CI_Controller {
 		$url = preg_replace("/[^A-Za-z0-9]/", '',  $this->input->post('company_name'));
 
 
+		//@TODO Need to check if the given url already exists if it does, then add a number to it and save
+		//@TODO email should be unique validation
 
 		$parameters = array(
 			'url'=>$url,

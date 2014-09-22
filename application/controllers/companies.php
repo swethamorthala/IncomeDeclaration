@@ -29,7 +29,7 @@ class Companies extends CI_Controller {
 		$data['company_name'] = $company->company_name;
 		$data['submission_url'] = $currenturl.'/login';
 
-		$this->form_validation->set_rules('user_name', 'User Name', 'required|xss_clean');
+		$this->form_validation->set_rules('user_name', 'User Name or Email', 'required|xss_clean');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE) {
@@ -37,6 +37,12 @@ class Companies extends CI_Controller {
 			$this->load->view('login/login', $data);
 			$this->load->view('templates/footer', $data);
 		} else {
+			//Check if the username is email or user name
+			//If username call getEmployee with username and password
+			//If email call getEmployee with username and password
+			//If employee is null, then show errors saying invalid username or password
+			//If employee exists then save employee into the session
+			//Need to return the employee here so that we can decide what is his user type and save the employee info in session
 			$loggedin = $this->register_model->login($company->id, $this->input->post('user_name'), md5($this->input->post('password')));
 			if($loggedin) {
 				$this->load->library('session');

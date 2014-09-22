@@ -76,13 +76,19 @@ class Register_Model extends CI_Model {
 	}
 
 	public function login($company_id, $user_name, $password) {
+		//@TODO check if the given is username or email, modify the query based on that
 		$sql = "SELECT * FROM user WHERE company_id = ? AND  user_name = ? AND password = ?";
 		$query = $this->db->query($sql, array($company_id, $user_name, $password));
+		//@TODO need to get employee info and return
 		if($query->num_rows() > 0) {
 			return TRUE;
 		} else {
 			return FALSE;
 		}
 	}
+
+	//getEmployee from username and password
+
+	//getEmployee from email and password
 }
 ?>
