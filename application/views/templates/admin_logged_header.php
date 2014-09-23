@@ -19,7 +19,7 @@ and open the template in the editor.
         
 		<ul class="tabs">
                         <li><a href="/index.php/logout">Logout</a></li> 
-			<li><a href="/index.php/listofemployee">List Of Employee</a></li>
+			<li><a href="listofemployee">List Of Employee</a></li>
 			<li><a href="/index.php/upload">Upload CTC</a></li>
 			<li><a href="employee">Add Employee</a></li>
 			<li><a href="/index.php/home">Home</a></li>

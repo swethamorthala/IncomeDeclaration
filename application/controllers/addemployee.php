@@ -26,7 +26,12 @@ class addemployee extends CI_Controller {
 	    $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]|max_length[50]');
           
            $company_id = $this->session->userdata('company_id'); 
-               
+
+		   //@TODO Need to ensure that the email address is unique. Add database constraint that the email addresss should be unique
+
+		   //@TODO Employee_uid should be unique for the given company.
+
+		   //@TODO The key employee_uid and company_id should be unique
              
            
 		$parameters = array(
