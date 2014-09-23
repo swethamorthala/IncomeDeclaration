@@ -6,7 +6,7 @@ and open the template in the editor.
 <body>
 <div class="content">
     <div class="login">
-    <h3> here is where company should log in </h3>
+    <h3> Login Details:</h3>
 
 	<?php echo validation_errors(); ?>
 	<?php
@@ -19,9 +19,8 @@ and open the template in the editor.
 
 <?php echo form_open($submission_url) ?>
 
-        
 
-	<label for="user_name">User Name : </label>
+	<label for="user_name">Username or Email : </label>
 	<input type="input" name="user_name" value="<?php echo set_value('user_name'); ?>" size="30"/><br />
 
 	<label for="password">Password : </label>

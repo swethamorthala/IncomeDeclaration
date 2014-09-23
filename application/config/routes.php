@@ -44,6 +44,7 @@ $route['logout'] = 'logout/index';
 $route['register'] = 'idregister/index';
 $route['aboutus'] = 'info/Aboutus/index';
 $route['contactus'] = 'info/contactus/index';
+$route['employeehome']='employee_home/index';
 $route['upload'] = 'upload/index';
 $route['upload/do_upload'] = 'upload/do_upload';
 $route['employee'] = 'addemployee/index';
