@@ -19,7 +19,13 @@ class ctcdetails_model extends CI_Model {
 	 
 	public function createCTCDetails( $ctcDetails) {
 
+			//First delete existing ctc detials
+
+			$this->db->trans_start();
+
 			$this->db->insert_batch('ctc_details',$ctcDetails);
+
+			$this->db->trans_complete();
 
 		}
 
