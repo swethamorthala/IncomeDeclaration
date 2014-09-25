@@ -23,14 +23,13 @@ body{
          background-color: whitesmoke;
 }
     
-div.add_employee {
-     
-    height:70%;
+div.add_employee {     
+    height:80%;
     width:60%;
     margin-left:20%;
     margin-right:20%;
     margin-top:10%; 
-    background-color: whitesmoke;
+    background-color:#B3B4BD;
     padding-top:2%;
     border-top:50px solid gainsboro;
      border-bottom:50px solid gainsboro;
@@ -39,16 +38,28 @@ div.add_employee h3{
     
     text-align: center;
     
+    
+}
+p{
+    color:red;
+ display: list-item;
+         
+}
+ul{
+  padding-left: 35%;
+  display: list-item;  
+ list-style-type:inherit;
 }
 div.content
 {
-    height:100%;
-        width: 70%;
+      height:110%;
+        width: 80%;
 	margin-left: 15%;
         margin-right: 15%;
         background-color:gainsboro;
         
 }
+
 
 div.button, div.buttons
 {
@@ -57,12 +68,12 @@ div.button, div.buttons
 	display : block;
         line-height: 35px;
         padding:3px 3px;
-	margin-left:45%;
+	margin-left:40%;
         
 }
 div.buttons{
     width:35%;
-   margin-left:40%;
+   margin-left:36%;
     
 }
 
@@ -76,7 +87,7 @@ div.button input, div.buttons input{
     
 }
 label {
-       
+        
         width:200px;
         clear:left;
         text-align:right;
@@ -87,13 +98,15 @@ input:hover{
     border: 1px solid #ff6600;   
 }
  input{
+     margin-right:8%;
     border: 1px solid white; 
     width:45%;
     height: 40px;
+    
 }
 
 input, label {
-         
+        
         float:left;
         line-height:30px;
          padding:7px 7px;
@@ -106,7 +119,7 @@ div.table
 }
 div.table tr th{
     width:20%;
-    background-color:#ff3300;
+    background-color:#0066ff;
     border: 1px solid whitesmoke;
     border-collapse: collapse;
     color: white;
@@ -125,7 +138,7 @@ div.table tr td {
 }
 div.table tr:nth-child(even) td {
     background-color:#ccccff;
-}#FFDEAD
+}
 div.table tr:nth-child(odd) td {
        background-color:#ffffff;
 }

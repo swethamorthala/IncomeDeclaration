@@ -24,23 +24,27 @@ body{
     
 div.register ,div.login {
      
-    height:50%;
+    height:60%;
     width:60%;
     margin-left:20%;
     margin-right:20%;
     margin-top:10%;
-    background-color: whitesmoke;
+    background-color:#B3B4BD;
     padding-top: 5%;
    border-top:50px solid gainsboro;
      border-bottom:50px solid gainsboro;
 }
-div.register h2{
+
+div.register h2 ,h3{
     
     text-align: center;
      
 }
 p{
-    background-color: whitesmoke;
+    color:red;
+    padding-left: 35%;
+    
+        
 }
 div.header
 {
@@ -50,12 +54,11 @@ div.header
 }
 div.content
 {
-    margin-left: 15%;
-        margin-right: 15%;
-        background-color:gainsboro;
-        /*height:100%;
-        width: 80%;
-        text-align:center;*/
+    margin-left:10%;
+    margin-right:10%; 
+    background-color:gainsboro;
+  /*  height:100%;
+    width: 80*/
 
 }
 div.button 
@@ -64,7 +67,7 @@ div.button
 	display : block;
         line-height: 30px;
          padding:7px 7px;
-	 margin-left:45%;
+	 margin-left:44%;
                             
 }
 div.button input{
@@ -75,7 +78,7 @@ div.button input{
 }
 
 label {
-       margin-left:8%;
+       margin-left:6%;
         width:180px;
         clear:left;
         text-align:right;
@@ -87,11 +90,13 @@ input:hover{
 }
 
 input{
+    
     border: 1px solid white; 
     width:40%;  
 }
 
 input, label {
+    
        line-height: 25px;
         float:left;
         padding:7px 7px;       
