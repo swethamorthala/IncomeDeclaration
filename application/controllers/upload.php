@@ -10,18 +10,26 @@
  *
  * @author Red
  */
+
 require_once '/Users/swethamorthala/Documents/workspace/DK/CodeIgniter_2.2.0/application/Classes/PHPExcel/IOFactory.php';
 
 class upload extends CI_Controller {
 	function __construct() {
+
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->model('ctcdetails_model');
 	}
 
-	function index() {
-		$this->load->view('upload_form', array('error' => ' ' ));
-	}
+
+	function index()
+	{
+             $this->load->view('templates/admin_logged_header');
+            $this->load->view('upload/upload_form', array('error' => ' ' ));
+	    $this->load->view('templates/footer');
+            
+        }
+
 
 	function do_upload() {
 		$config['upload_path'] = '.././uploads/';
@@ -33,8 +41,9 @@ class upload extends CI_Controller {
 
 		if ( ! $this->upload->do_upload()) {
 			$error = array('error' => $this->upload->display_errors());
-
-			$this->load->view('upload_form', $error);
+                        $this->load->view('templates/admin_logged_header');
+			$this->load->view('upload/upload_form', $error);
+                        $this->load->view('templates/footer');
 		}
 		else {
 			$data = array('upload_data' => $this->upload->data());
@@ -86,7 +95,6 @@ class upload extends CI_Controller {
 			$this->ctcdetails_model->createCTCDetails($ctcDetails);
 
 			//var_dump($objPHPExcel);
-
 
 		}
 	}
