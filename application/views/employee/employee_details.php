@@ -2,8 +2,7 @@
     <div class="add_employee">
         <h3> Employee Details:</h3>
 <?php echo validation_errors(); ?>
-
-<?php echo form_open('employeedetails') ?>
+       <?php echo form_open('employeedetails') ?>
         
         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
 
@@ -33,6 +32,7 @@
     
 
 </form>
-</div>
+
+    </div>
 </div>
 

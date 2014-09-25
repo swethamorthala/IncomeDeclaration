@@ -10,7 +10,7 @@
  *
  * @author Red
  */
-class employee_details extends CI_Controller{
+class my_details extends CI_Controller{
     //put your code here
 public function  __construct() {
 		parent::__construct();
@@ -31,44 +31,36 @@ public function  __construct() {
             $this->form_validation->set_rules('password', 'password', 'min_length[7]|max_length[50]');
           
                         $company_id = $this->session->userdata('company_id');
-                      
-                        $id=$this->input->get('id'); 
-                        if(!$id ) {
-                            $id=$this->input->post('id');
-                        }
-               
-                        if($id>0){
+                    $employee_id = $this->session->userdata('employee_id');
+                    $role_band = $this->session->userdata('role_band');
+                    
+                    $data = array(
+                       'company_id' => $company_id,
+			'employee_id' => $employee_id,
+			'first_name'=> $this->session->userdata('first_name'),
+                        'last_name'=> $this->session->userdata('last_name'),                       
+                        'employee_uid'=>$this->session->userdata('employee_uid'),
+			'email'=>$this->session->userdata('email'),
+                        'user_name'=>$this->session->userdata('user_name'),
+			'password'=>md5($this->session->userdata('password'))
                             
-                            $employee_id=$id;
+				) ;
+             
                     
-                  $query = $this->employeedetails_model->get($id);
-                  
-                   $query1 = $this->employeedetails_model->getuser($employee_id);
-                   
-                   $data = array(
-			 'id' => $id,
-			'first_name'=>$query->first_name,
-                        'last_name'=>$query->last_name,
-                        'employee_uid'=>$query->employee_uid,
-			'email'=>$query->email,
-                        'user_name'=>$query1->user_name,
-			'password'=>$query1->password
-                              
-				);  
-                   
-             }
-                    
-              
+                 
 		if($this->form_validation->run() === FALSE) {
-			$this->load->view('templates/admin_logged_header',$data);
+			$this->load->view('templates/employee_logged_header',$data);
 			$this->load->view('employee/employee_details',$data);
 			$this->load->view('templates/footer',$data);
 		} 
                 else  {
+                    
                     $save=$this->input->post('save');
+                   
                     if($save == save){
                     $parameters = array(
-                        'id'=>$id,
+                        'id'=>$employee_id,
+                        'role_band'=>$role_band,
 			'first_name'=>$this->input->post('first_name'),
                         'last_name'=>$this->input->post('last_name'),
                         'employee_uid'=>$this->input->post('employee_uid'),
@@ -78,18 +70,19 @@ public function  __construct() {
 		);  
                     
                     $this->employeedetails_model->create($parameters);
-                             
-			$this->load->view('templates/admin_logged_header',$data);
-			$this->load->view('employee/employee_details_success',$data);   
-                        $this->load->view('templates/footer',$data);
+                            
+			$this->load->view('templates/employee_logged_header');
+			 
+                        $this->load->view('templates/footer');
                     }
+                    
                     else{
-                        redirect('/listofemployee');
+                   echo 'not updated';
                     }
-         
+                
                 }
+        
         }
-
 }
 ?>
 

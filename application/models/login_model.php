@@ -30,8 +30,10 @@ public function getEmpfromemail($company_id, $email, $password) {
 			return $query->row();
 		} else {
 			return FALSE;
-		}      
+		} 
+                
 }
+
 }
 ?>
 

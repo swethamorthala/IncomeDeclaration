@@ -1,3 +1,4 @@
+
 <?php
 /* 
  * To change this template, choose Tools | Templates
@@ -52,7 +53,7 @@ class Companies extends CI_Controller {
                   
               }    
      else{
-                  $employee = $this->login_model->getEmpfromusername($company->id, $user_name,$password=md5($this->input->post('password')));
+         $employee = $this->login_model->getEmpfromusername($company->id, $user_name,$password=md5($this->input->post('password')));
              }                   
                 
        if($employee && $employee->id) {
@@ -62,8 +63,15 @@ class Companies extends CI_Controller {
 				$this->session->set_userdata('company_id',$company->id);
 				$this->session->set_userdata('company_name',$company->company_name);
 				$this->session->set_userdata('company_url',$currenturl);
-			        $this->session->set_userdata('isUserLoggedIn',TRUE);     
-                                 
+			        $this->session->set_userdata('isUserLoggedIn',TRUE); 
+                                $this->session->set_userdata('employee_id',$employee->id);
+                                $this->session->set_userdata('first_name',$employee->first_name);
+                                $this->session->set_userdata('last_name',$employee->last_name);
+                                $this->session->set_userdata('employee_uid',$employee->employee_uid);
+                                $this->session->set_userdata('password',$employee->password);
+                                $this->session->set_userdata('email',$employee->email);                                   
+                                $this->session->set_userdata('role_band',$employee->role_band);
+                                
                                   redirect('/employeehome');
                     }
           

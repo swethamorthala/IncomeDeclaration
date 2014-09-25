@@ -36,8 +36,8 @@ class employeedetails_model extends CI_Model {
             
               // $this->db->where('id',$id);
                 $this->db->update('employee', $employee, array('id' => $parameters['id']));
-
-                   
+               
+                
 		 $user = array(
                       'company_id' => $parameters['company_id'],
                        'user_name' => $parameters['user_name'],

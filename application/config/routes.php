@@ -49,6 +49,7 @@ $route['upload'] = 'upload/index';
 $route['upload/do_upload'] = 'upload/do_upload';
 $route['employee'] = 'addemployee/index';
 $route['employeedetails'] = 'employee_details/index';
+$route['mydetails'] = 'my_details/index';
 $route['listofemployee'] = 'listofemployee/index';
 
 $route['(:any)/employee'] = 'addemployee/index';

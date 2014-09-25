@@ -87,8 +87,5 @@ class Register_Model extends CI_Model {
 		}
 	}
 
-	//getEmployee from username and password
-
-	//getEmployee from email and password
-}
+	}
 ?>
