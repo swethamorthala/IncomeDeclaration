@@ -19,6 +19,7 @@ class upload extends CI_Controller {
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->model('ctcdetails_model');
+		$this->load->model('db_helper');
 	}
 
 
