@@ -26,6 +26,7 @@ class employeedetails_model extends CI_Model {
 
                
 		 $employee = array(
+                      'company_id' => $parameters['company_id'],
 			'first_name' => $parameters['first_name'],
 			'last_name' => $parameters['last_name'],
                         'employee_uid'=>$parameters['employee_uid'],
@@ -41,7 +42,6 @@ class employeedetails_model extends CI_Model {
 		 $user = array(
                       'company_id' => $parameters['company_id'],
                        'user_name' => $parameters['user_name'],
-		       'password' => $parameters['password'],
                        'email' => $parameters['email'],
 			
 		);

@@ -8,9 +8,18 @@ and open the template in the editor.
 <div class="table">  
     
 <?php   
-echo $table;
-?>    
+
+     echo $table;
+    
+ ?>    
     
 </div>
+    <div>
+    <?php   
+
+     
+      echo $links;
+     ?> 
+    </div>
 </body>
 

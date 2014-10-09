@@ -68,11 +68,12 @@ class Companies extends CI_Controller {
                                 $this->session->set_userdata('first_name',$employee->first_name);
                                 $this->session->set_userdata('last_name',$employee->last_name);
                                 $this->session->set_userdata('employee_uid',$employee->employee_uid);
-                                $this->session->set_userdata('password',$employee->password);
                                 $this->session->set_userdata('email',$employee->email);                                   
                                 $this->session->set_userdata('role_band',$employee->role_band);
-                                
-                                  redirect('/employeehome');
+                                                            
+                                 
+                                   redirect('/employeehome');
+                                  
                     }
           
        

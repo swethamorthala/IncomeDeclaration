@@ -18,7 +18,8 @@ and open the template in the editor.
     <div class="header-tabs">
         
 		<ul class="tabs">
-                        <li><a href="logout">Logout</a></li> 
+                        <li><a href="logout">Logout</a></li>
+                       <li><a href="upload">Upload CTC</a></li>
                         <li><a href="mydetails">My Details</a></li>
 		
                     

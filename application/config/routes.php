@@ -48,9 +48,12 @@ $route['employeehome']='employee_home/index';
 $route['upload'] = 'upload/index';
 $route['upload/do_upload'] = 'upload/do_upload';
 $route['employee'] = 'addemployee/index';
+$route['ctcdetails'] = 'ctc_details/index';
 $route['employeedetails'] = 'employee_details/index';
 $route['mydetails'] = 'my_details/index';
 $route['listofemployee'] = 'listofemployee/index';
+$route['listofemployee/(:any)'] = 'listofemployee/index';
+
 
 $route['(:any)/employee'] = 'addemployee/index';
 $route['(:any)/upload'] = 'upload/index';

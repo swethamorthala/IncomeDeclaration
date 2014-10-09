@@ -2,7 +2,7 @@
     <div class="add_employee">
         <h3> Employee Details:</h3>
 <?php echo validation_errors(); ?>
-       <?php echo form_open('employeedetails') ?>
+       <?php echo form_open('mydetails') ?>
         
         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
 
@@ -20,12 +20,11 @@
 	<input type="input" name="email" value="<?php echo $email; ?>" size="30"/><br />
         
         <label for="user name">User Name : </label>
-	<input type="input" name="user_name" value="<?php echo $user_name; ?>" size="30"/>
+	<input type="input" name="user_name" value="<?php echo $user_name; ?>" size="30"/><br />
 
-       
         <div class="buttons">
-            <input type="submit" name="save" value="save" />
-            <input type="submit" name="cancel" value="cancel"/>
+        <input type="submit" name="save" value="save" />
+        <input type="submit" name="cancel" value="cancel"/>
 	</div>
     
 

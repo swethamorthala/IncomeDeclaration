@@ -30,6 +30,7 @@ class Employee_Model extends CI_Model {
 			'Last_Name' => $parameters['Last_Name'],
                         'employee_uid'=>$parameters['employee_uid'],
                         'Role_Band' =>'EMPLOYEE',
+                        'password' => $parameters['password'],
                         'Email' => $parameters['Email'],            
 			'status' => 'ACTIVE'
 
@@ -44,7 +45,7 @@ class Employee_Model extends CI_Model {
 		       'user_name' => '',
 		       'password' => $parameters['password'],
                        'Email' => $parameters['Email'],
-			'status' => 'ACTIVE'
+		       'status' => 'ACTIVE'
 
 		);
 
